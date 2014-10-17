@@ -1,10 +1,10 @@
 {
-  "name": "gulp-svg2png",
-  "version": "0.3.0",
-  "description": "A gulp plugin for converting SVGs to PNGs.",
+  "name": "gulp-svg2pngvariants",
+  "version": "0.3.1",
+  "description": "A gulp plugin for converting SVGs to multiple PNGs.",
   "author": {
-    "name": "André König",
-    "email": "andre.koenig@posteo.de"
+    "name": "André König, Ian Mercer",
+    "email": "andre.koenig@posteo.de, ian@signswift.com"
   },
   "license": "MIT",
   "main": "index.js",
@@ -13,28 +13,39 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:akoenig/gulp-svg2png.git"
+    "url": "git@github.com:IanMercer/gulp-svg2png.git"
   },
   "keywords": [
     "gulpplugin",
     "svg",
     "png",
     "converter",
-    "svg2png"
+    "svg2png",
+    "storeicons",
+    "ios",
+    "android",
+    "favicon"
   ],
   "bugs": {
-    "url": "https://github.com/akoenig/gulp-svg2png/issues"
+    "url": "https://github.com/ianmercer/gulp-svg2png/issues"
   },
-  "homepage": "https://github.com/akoenig/gulp-svg2png",
+  "homepage": "https://github.com/ianmercer/gulp-svg2png",
   "devDependencies": {
+    "async": "^0.9.0",
+    "gulp": "~3.8.0",
     "gulp-jasmine": "~0.2.0",
     "gulp-jshint": "~1.7.0",
-    "gulp": "~3.8.0",
-    "imagesize": "~1.0.0"
+    "imagesize": "~1.0.0",
+    "lodash.assign": "^2.4.1",
+    "minimatch": "^1.0.0",
+    "phantomjs": "^1.9.11",
+    "through2": "^0.6.3"
   },
   "dependencies": {
     "map-stream": "~0.1.0",
-    "svg2png": "~1.1.0",
-    "gulp-util": "~2.2.14"
+    "gulp-util": "~2.2.14",
+    "phantomjs": "~1.9.0",
+    "through2": "^0.6.3",
+    "lodash.assign": "^2.4.1"
   }
 }
