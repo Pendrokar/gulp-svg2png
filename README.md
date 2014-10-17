@@ -42,6 +42,8 @@ var defaultOptions = {
 }
 ```
 
+Each variant can include a `width` and a `height` and a function `name` that maps source names to the path where the converted PNG file should be stored (the .png extension) will be added automatically.
+
 ## Changelog
 
 See [HISTORY.md](https://github.com/ianmercer/gulp-svg2png/blob/master/HISTORY.md)
