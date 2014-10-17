@@ -1,20 +1,20 @@
 # gulp-svg2png [![Build Status](https://travis-ci.org/akoenig/gulp-svg2png.png?branch=master)](https://travis-ci.org/akoenig/gulp-svg2png)
 
-> A gulp plugin for converting SVGs to PNGs.
+> A gulp plugin for converting SVGs to multiple PNGs.
 
 
 ## Usage
 
-First, install `gulp-svg2png` as a development dependency:
+First, install `gulp-svg2pngvariants` as a development dependency:
 
 ```shell
-npm install --save-dev gulp-svg2png
+npm install --save-dev gulp-svg2pngvariants
 ```
 
 Then, add it to your `gulpfile.js`:
 
 ```javascript
-var svg2png = require('gulp-svg2png');
+var svg2png = require('gulp-svg2pngvariants');
 
 gulp.task('svg2png', function () {
     gulp.src('./specs/assets/**/*.svg')
@@ -25,20 +25,28 @@ gulp.task('svg2png', function () {
 
 ## Arguments
 
-### svg2png([scaling, verbose])
+### svg2png([options])
 
-`scaling`
+`options`
 
-The scaling factor (optional; default=1.0)
+```javascript
+var defaultOptions = {
+  verbose: true,
+  maxConcurrency : 8,   /* Limit in order to prevent using too many file handles */
+  variants : [
 
-`verbose`
-
-Logs progress information (optional; default=false)
+  // Web 
+  { width: 32, name : function (n) { return path.join('icons', 'web', n + "_32x32");}},
+  { width: 64, name : function (n) { return path.join('icons', 'web', n + "_64x64");}}
+  ...
+}
+```
 
 ## Changelog
 
-See [HISTORY.md](https://github.com/akoenig/gulp-svg2png/blob/master/HISTORY.md)
+See [HISTORY.md](https://github.com/ianmercer/gulp-svg2png/blob/master/HISTORY.md)
 
 ## Author
 
-Copyright 2014, [André König](http://iam.andrekoenig.info) (andre.koenig@posteo.de)
+Original version copyright 2014, [André König](http://iam.andrekoenig.info) (andre.koenig@posteo.de)
+This version copyright 2014, [Ian Mercer](http://blog.abodit.com) (ian@signswift.com)
