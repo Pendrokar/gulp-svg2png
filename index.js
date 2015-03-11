@@ -269,7 +269,7 @@ module.exports = function (config) {
 
         var tempFile = path.join(os.tmpdir(), uuid() + '.png');
 
-        var args = [converterFileName, sourceFileName, tempFile, variant.width, variant.height];
+        var args = [converterFileName, sourceFileName, tempFile, variant.width, variant.height, variant.scaling];
 
         execFile(phantomjsCmd, args, function (err, stdout, stderr) {
             if (err) {
